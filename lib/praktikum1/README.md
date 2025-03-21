@@ -1,4 +1,4 @@
-![Hasil Capture JSON dari Google Books](../../images/soal_2.png)
+![Hasil Capture JSON dari Google Books](/assets/images/soal_2.png)
 
 ## Soal 3 – Penjelasan Kode: `substring` dan `catchError`
 
@@ -18,4 +18,4 @@
 
 ### gif
 
-![Hasil Praktikum GIF](../../images/soal_3.gif)
+![Hasil Praktikum GIF](/assets/images/soal_3.gif)
