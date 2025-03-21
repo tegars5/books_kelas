@@ -1,7 +1,6 @@
-import 'dart:async';
 import 'package:asynchronous/praktikum1/future_page.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:asynchronous/praktikum2/future_page2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const FuturePage(),
+      home: const FuturePage2(),
     );
   }
 }
