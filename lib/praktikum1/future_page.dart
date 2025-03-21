@@ -27,7 +27,21 @@ class _FuturePageState extends State<FuturePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Spacer(),
-            ElevatedButton(child: const Text('GO!'), onPressed: () {}),
+            ElevatedButton(
+              onPressed: () {
+                setState(() {});
+                getData()
+                    .then((value) {
+                      result = value.body.toString().substring(0, 450);
+                      setState(() {});
+                    })
+                    .catchError((_) {
+                      result = 'An error occurred';
+                      setState(() {});
+                    });
+              },
+              child: const Text('GO!'),
+            ),
             const Spacer(),
             Text(result),
             const Spacer(),
