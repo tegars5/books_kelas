@@ -14,15 +14,13 @@ class _FuturePage4State extends State<FuturePage4> {
   String result = '';
   // Fungsi FutureGroup untuk menjalankan beberapa async sekaligus
   void returnFG() {
-    FutureGroup<int> futureGroup = FutureGroup<int>();
+    final futures = Future.wait<int>([
+      returnOneAsync(),
+      returnTwoAsync(),
+      returnThreeAsync(),
+    ]);
 
-    futureGroup.add(returnOneAsync());
-    futureGroup.add(returnTwoAsync());
-    futureGroup.add(returnThreeAsync());
-
-    futureGroup.close();
-
-    futureGroup.future.then((List<int> value) {
+    futures.then((List<int> value) {
       int total = 0;
       for (var element in value) {
         total += element;
