@@ -68,6 +68,18 @@ class _FuturePage5State extends State<FuturePage5> {
     throw Exception('something terrible happened!');
   }
 
+  Future handleError() async {
+    try {
+      await returnError();
+    } catch (error) {
+      setState(() {
+        result = error.toString();
+      });
+    } finally {
+      print('complete');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,18 +90,7 @@ class _FuturePage5State extends State<FuturePage5> {
           children: [
             ElevatedButton(
               onPressed: () {
-                returnError()
-                    .then((value) {
-                      setState(() {
-                        result = 'Success';
-                      });
-                    })
-                    .catchError((onError) {
-                      setState(() {
-                        result = onError.toString();
-                      });
-                    })
-                    .whenComplete(() => print('Complete'));
+                handleError();
               },
               child: const Text('GO!'),
             ),
