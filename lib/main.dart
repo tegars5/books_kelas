@@ -1,11 +1,5 @@
-import 'package:asynchronous/praktikum1/future_page.dart';
-import 'package:asynchronous/praktikum7/geolocation2.dart';
+import 'package:asynchronous/praktikum9/navigation_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:asynchronous/praktikum2/future_page2.dart';
-import 'package:asynchronous/praktikum3/future_page3.dart';
-import 'package:asynchronous/praktikum4/future_page4.dart';
-import 'package:asynchronous/praktikum5/future_page5.dart';
-import 'package:asynchronous/praktikum6/geolocation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const LocationScreen2(),
+      home: const NavigationDialogScreen(),
     );
   }
 }
