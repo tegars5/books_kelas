@@ -20,8 +20,12 @@ class _FuturePage3State extends State<FuturePage3> {
   }
 
   Future calculate() async {
-    await Future.delayed(const Duration(seconds: 5));
-    completer.complete(42);
+    try {
+      await Future.delayed(const Duration(seconds: 5));
+      completer.complete(42);
+    } catch (_) {
+      completer.completeError('Terjadi kesalahan');
+    }
   }
 
   Future<http.Response> getData() async {
@@ -73,9 +77,7 @@ class _FuturePage3State extends State<FuturePage3> {
                       });
                     })
                     .catchError((e) {
-                      setState(() {
-                        result = 'An error occurred';
-                      });
+                      result = 'An error occurred';
                     });
               },
               child: const Text('GO!'),
