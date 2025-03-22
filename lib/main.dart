@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:asynchronous/praktikum2/future_page2.dart';
 import 'package:asynchronous/praktikum3/future_page3.dart';
 import 'package:asynchronous/praktikum4/future_page4.dart';
+import 'package:asynchronous/praktikum5/future_page5.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const FuturePage4(),
+      home: const FuturePage5(),
     );
   }
 }
