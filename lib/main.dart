@@ -1,4 +1,5 @@
 import 'package:asynchronous/praktikum1/future_page.dart';
+import 'package:asynchronous/praktikum7/geolocation2.dart';
 import 'package:flutter/material.dart';
 import 'package:asynchronous/praktikum2/future_page2.dart';
 import 'package:asynchronous/praktikum3/future_page3.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const LocationScreen(),
+      home: const LocationScreen2(),
     );
   }
 }
